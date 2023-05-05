@@ -1,51 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="子供用ゲーム、教育用ゲーム、タイピング、ヒーロー、タイピングヒーロー、タイピング練習" />
-    <meta name="description" content="子供のためのゲーム、楽しくゲームしながら学習する！" />
-    <meta name="author" content="ワクスク" />
-    <title>ワクワク！スクスク！ワクスク！</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Stick&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="子供用ゲーム、教育用ゲーム、タイピング、ヒーロー、タイピングヒーロー、タイピング練習" />
+  <meta name="description" content="子供のためのゲーム、楽しくゲームしながら学習する！" />
+  <meta name="author" content="ワクスク" />
+  <title>ワクスク！ - ワクワク！すくすく！ワクスク</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <header>
-        <h2 class="logo">ワクスク</h2>
-        <nav class="navigation">
-            <a href="/">ホーム</a>
-            <a href="/wakusuku/game/typinghero/index.html#app" target="_blank" rel="noreferrer noopener">タイピング・ヒーロー</a>
-        </nav>
+  <body>
+    <header class="header">
+      <a href="index.html" class="logo">ワクスク</a>
+      <i class='bx bx-menu' id="menu-icon"></i>
+      <nav class="navbar">
+        <a href="index.html" class="current-page">ホーム</a>
+        <a href="contactus.html">みなのこえ</a>
+        <a href="about.html">ワクスクとは？</a>
+      </nav>
     </header>
-    <div class="hero">
-        <div class="detel">
-            <h1>タイピング・ヒーロー</h1>
-            <p>
-                子供のためのタイピング・ゲーム！
-                <br>タイピング・ヒーロー
-                <br>日本語でタイピングしてみよう！
-                <br>
-                <span class="description">
-                    タイピング・ヒーローはPC上でキーボードでプレイすることを想定しています。
-                </span>
-            </p>
-            
-            <a class="btnGamePlay" href="/wakusuku/game/typinghero/index.html" target="_blank" rel="noreferrer noopener">ゲームをはじめる</a>
+    <!-- Contents Start -->
+    <div class="contents-container">
+      <!-- メインの情報、タイピング・ヒーローの案内及びショットカット-->
+      <div class="main-title">
+        <div class="game-content">
+          <h1 class="game-title">タイピング・ヒーロー</h1>
+          <p>
+            キミはタイピングができるのかい？<br>
+            日本語へんかんもできる？<br>
+            日本語タイピングにちょうせんしてみない？<br>
+            日本語で入力するタイピングゲーム！<br>
+            タイピング・ヒーロー<br>
+            <span class="caution-message">このゲームはパソコンでキーボードにて<br>プレイすることを想定しています。</span>
+          </p>
+          <a href="./game/typinghero/index.html#game" class="game-start-btn">ちょうせんする！</a>
         </div>
-        <div class="images">
-            <img src="images/typingboy.png" class="typingboy">
+        <div class="image">
+          <img src="images/typinghero.png" alt="">
         </div>
+      </div>
+      <!-- お知らせ情報を箱で並べる -->
+      <div class="notice-area">
+        <h1 class="area-title">お知らせ</h1>
+        <div class="notice-content">
+          <a href="./notice/notice01.html" class="notice-anchor">
+            <h2 class="notice-title">ついにタイピング・ヒーローをリリース！</h2>
+            <div class="notice-date">2023-05-03</div><br>
+            <p>ついにタイピング・ヒーローをリリースしました！</p>
+          </a>
+        </div>
+      </div>
     </div>
+    <!-- Contents End -->
     <footer>
-        <div class="footerContainer">
-            <div class="footerBottom">
-                <p>Copyright &copy;2023; Developed by <span class="developer">YangsNote</span></p>
-            </div>
-        </div>
+      <div class="footerContainer">
+          <div class="footerBottom">
+              <p>Copyright &copy;2023; Developed by <span class="developer">YangsNote</span></p>
+          </div>
+      </div>
     </footer>
+    <script src="./js/menu.js"></script>
+  </body>
 </body>
 </html>

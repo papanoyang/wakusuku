@@ -1,165 +1,384 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Stick&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Stick&family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap');
+
 * {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  box-sizing: border-box;
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: black;
+  min-height: 100vh;
+  position: relative;
+  background-color: #000;
 }
 
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 70px;
-    padding: 20px 100px;
-    background: #393232;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 99;
+.header {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  background: #191A19;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid #1E5128;
 }
 
 .logo {
-    font-size: 2em;
-    color: #f2dd77;
-    font-family: 'Stick';
-    user-select: none;
+  color: #D8E9A8;
+  font-size: 25px;
+  text-decoration: none;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-weight: 900;
+  transition: 0.3s;
 }
 
-.navigation a {
-    position: relative;
-    font-size: 1.1em;
-    color: #f2dd77;
-    text-decoration: none;
-    font-weight: 500;
-    margin-left: 40px;
-    font-family: 'Stick';
+.navbar a {
+  color: #4E9F3D;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 35px;
+  transition: 0.3s;
 }
 
-.navigation a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    width: 100%;
-    height: 3px;
-    background: #f2dd77;
-    border-radius: 5px;
-    transform-origin: right;
-    transform: scaleX(0);
-    transition: transform .5s;
+.navbar a:hover {
+  color: #D8E9A8;
 }
 
-.navigation a:hover:after {
-    transform-origin: left;
-    transform: scaleX(1);
+.navbar a.current-page {
+  padding-bottom: 5px;
+  border-bottom: 2px solid #4E9F3D;
 }
 
-.hero {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background: #393232;
+#menu-icon {
+  font-size: 36px;
+  color: #D8E9A8;
+  display: none;
+  border-radius: 10px;
 }
 
-.detel {
-    margin-left: 8%;
-    margin-top: 15%;
+/* for contents */
+
+.contents-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 10vh 10vw;
+  justify-content: center;
+  align-items: center;
 }
 
-.detel h1 {
-    font-size: 50px;
-    color: #E48257;
-    margin-bottom: 20px;
-    font-family: 'Stick';
+.contents-container .main-title {
+  position: relative;
+  width: 100%;
+  margin-bottom: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2vh 2vw;
+  background: #1E5128;
+  border: 5px solid #4E9F3D;
+  border-radius: 5px;
 }
 
-.detel p {
-    color: #F2EDD7;
-    font-family: 'Stick';
-    font-size: 20px;
-    line-height: 35px;
+.main-title .game-content {
+  position: relative;
 }
 
-.detel .description {
-    color: #f2dd77;
-    font-family: sans-serif;
-    font-size: 15px;
+.main-title .image {
+  position: relative;
+  width: 30%;
 }
 
-.detel .btnGamePlay {
-    padding: 10px 18px;
-    display: inline-block;
-    margin: 30px 0;
-    background: transparent;
-    border: 2px solid #F2EDD7;
-    outline: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 1.1em;
-    color: #F2EDD7;
-    font-weight: 500;
-    margin-left: 40px;
-    transition: .5s;
-    text-decoration: none;
+.main-title .image img {
+  position: relative;
+  width: 100%;
+  border: 2px solid #1E5128;
+  border-radius: 5px;
 }
 
-.detel .btnGamePlay:hover {
-    background: #F2EDD7;
-    color: #393232;
+.game-content .game-title {
+  font-family: 'Stick', sans-serif;
+  font-size: 50px;
+  color: #D8E9A8;
 }
 
-.images {
-    width: 30%;
-    height: 80%;
-    position: absolute;
-    bottom: 0;
-    right: 100px;
+.game-content p {
+  font-family: 'Stick', sans-serif;
+  font-size: 20px;
+  color: #D8E9A8;
+  padding: 5%;
 }
 
-.images img {
-    height: 30%;
-    position: relative;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-    transition: bottom 1s, left 1s;
+.game-content p .caution-message {
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: 15px;
+  color: #4E9F3D;
 }
 
+.game-content .game-start-btn {
+  margin-left: 5%;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: 20px;
+  color: #D8E9A8;
+  background-color: #1E5128;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 1px solid #D8E9A8;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.game-content .game-start-btn:hover {
+  color: #1E5128;
+  background-color: #D8E9A8;
+}
+
+.contents-container .notice-area {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1%;
+}
+
+.area-title {
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: 40px;
+  color: #D8E9A8;
+  font-weight: 900;
+  margin: 1%;
+}
+
+.notice-content {
+  width: 100%;
+  background: #D8E9A8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #4E9F3D;
+  border-radius: 5px;
+}
+
+.notice-anchor {
+  text-decoration: none;
+  color: #1E5128;
+}
+
+.notice-anchor:hover {
+  text-decoration: underline;
+}
+
+.notice-title {
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: 20px;
+  color: #1E5128;
+  margin-left: 5px;
+}
+
+.notice-date {
+  text-align: center;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: 15px;
+  color: #1E5128;
+}
+
+.notice-content p {
+  text-align: center;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: 15px;
+  color: #1E5128;
+  padding: 10px;
+}
+
+/* Footer */
 footer {
-    position: absolute;
-    display: flex;
-    background-color: #393232;
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
 }
 
-.footerContainer {
+footer .footerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerBottom p {
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: 14px;
+  color: #1E5128;
+  margin: 10px auto;
+}
+.footerBottom .developer {
+  color: #4E9F3D;
+  font-weight: 500;
+}
+
+/* FOR SUB PAGE ARTICLES START */
+.articles-container {
+  margin-top: 0;
+  width: 100%;
+  padding-top: 0;
+  padding-left: 10%;
+  padding-bottom: 10%;
+  padding-right: 10%;
+}
+
+.articles-container .article-path {
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #D8E9A8;
+}
+
+.articles-container .article-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.articles-container .article-box .article-title {
+  width: 100%;
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+.articles-container .article-box .article-title h1 {
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: 40px;
+  color: #D8E9A8;
+  text-align: center;
+}
+
+.articles-container .article-box .article-date {
+  text-align: right;
+  margin-right: 10px;
+}
+
+.articles-container .article-box .article-date .date {
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: 15px;
+  color: #D8E9A8;
+}
+
+.articles-container .article-box .article-content {
+  padding: 10%;
+}
+
+.articles-container .article-box .article-content p {
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: 20px;
+  color: #D8E9A8;
+}
+/* FOR SUB PAGE ARTICLES END */
+
+/* BREAKPOINTS */
+@media (max-width: 992px) {
+  .header {
+    padding: 1.25rem 4%;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  #menu-icon {
+    display: block;
+  }
+
+  .navbar {
+    position: fixed;
+    top: 100%;
+    left: 0;
     width: 100%;
-    padding: 70px 30px 20px;
-}
+    padding: 0.5rem 5%;
+    background: #191A19;
+    border-bottom: 2px solid #1E5128;
+    backdrop-filter: blur(10px);
+    display: none;
+    z-index: 99;
+  }
 
-.footerBottom {
-    padding: 20px;
-    text-align: center;
-}
+  .navbar.active {
+    display: block;
+  }
 
-.footerBottom {
-    color: #F2EDD7;
-    font-family: 'Poppins';
-}
+  .navbar a {
+    display: block;
+    margin: 1.5rem 0;
+  }
 
-.developer {
-    opacity: 0.7;
-    letter-spacing: 1px;
-    font-weight: 400;
-    margin: 0px 5px;
-    color: #E48257;
+  .footerBottom p {
+    font-size: 8px;
+  }
+
+  .main-title .image {
+    display: none;
+  }
+  
+  .main-title .image img {
+    display: none;
+  }
+
+  .game-content .game-title {
+    font-size: 20px;
+  }
+
+  .game-content p {
+    font-size: 12px;
+  }
+
+  .game-content p .caution-message {
+    font-size: 10px;
+    color: #FF0000;
+    font-weight: 900;
+  }
+
+  .game-content .game-start-btn {
+    font-size: 12px;
+    padding: 5px 5px;
+  }
+
+  .area-title {
+    font-size: 20px;
+  }
+
+  .notice-title {
+    font-size: 14px;
+  }
+  .notice-date {
+    font-size: 10px;
+  }
+  
+  .notice-content p {
+    font-size: 11px;
+  }
+
+  .articles-container .article-path {
+    font-size: 10px;
+  }
+
+  .articles-container .article-box .article-title h1 {
+    font-size: 20px;
+  }
+
+  .articles-container .article-box .article-date .date {
+    font-size: 10px;
+  }
+
+  .articles-container .article-box .article-content p {
+    font-size: 12px;
+  }
 }
